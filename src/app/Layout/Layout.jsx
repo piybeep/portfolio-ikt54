@@ -5,7 +5,7 @@ import logo from '@/img/img/logo.png'
 const Layout = ({ children }) => {
     return (
         <>
-            <div className='flex-center w-full gap-x-8'>
+            <div className='flex-center w-full gap-x-8 mb-[90px]'>
                 <Image src={logo} alt='ikt54' />
                 <div className='font-Nunito font-semibold text-sky'>
                     <p className='text-[17px] leading-6'>Колледж Связи №54 им. П. М. Вострухина</p>

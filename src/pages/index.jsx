@@ -1,6 +1,7 @@
 
+import Info from "@/app/components/Info/Info";
 import Layout from "@/app/Layout/Layout";
-import Main from "@/Main/Main";
+import Main from "@/app/screen/Main/Main";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
 Home.getLayout = (page) => {
   return (
     <Layout>
+      <Info/>
       {page}
     </Layout>
   )
