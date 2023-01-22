@@ -1,7 +1,19 @@
-export default function Home() {
+
+import Layout from "@/app/Layout/Layout";
+import Main from "@/Main/Main";
+
+const Home = () => {
   return (
-    <div>
-      123
-    </div>
+    <Main />
   )
 }
+
+Home.getLayout = (page) => {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
+}
+
+export default Home

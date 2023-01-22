@@ -5,7 +5,13 @@ module.exports = {
     "./src/**/*.{js,jsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      Nunito: ['Nunito']
+    },
+    colors: {
+      sky: '#4E73DF',
+      default: '#383838'
+    }
   },
   plugins: [
     plugin(({ addUtilities }) => {
