@@ -1,4 +1,3 @@
-
 import Info from "@/app/components/Info/Info";
 import Layout from "@/app/Layout/Layout";
 import Main from "@/app/screen/Main/Main";

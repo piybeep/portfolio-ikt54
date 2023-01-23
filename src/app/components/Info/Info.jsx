@@ -1,29 +1,29 @@
 import React from 'react'
 import s from './Info.module.scss'
-import tg from '@/img/img/tg.jpg'
-import ikt from '@/img/img/ikt.jpg'
-import vk from '@/img/img/vk.jpg'
+// import tg from '@/img/img/tg.jpg'
+// import ikt from '@/img/img/ikt.jpg'
+// import vk from '@/img/img/vk.jpg'
 import Image from 'next/image'
 
 const Info = () => {
 
   const data = [
     {
-      src: ikt,
+      src: '/img/ikt.jpg',
       text: 'ks54.ru'
     },
     {
-      src: vk,
+      src: '/img/vk.jpg',
       text: 'ks54_ikt'
     },
     {
-      src: tg,
+      src: '/img/tg.jpg',
       text: '@ks54_ikt'
     }
   ]
 
   return (
-    <div className='flex flex-col gap-y-[70px]'>
+    <div className='flex flex-col gap-y-[70px] mb-[146px]'>
       <div className='flex gap-x-[30px]'>
         <div className={s.infoCont}>
           <h1>о сайте</h1>
@@ -43,7 +43,7 @@ const Info = () => {
           data.map((el, ind) => {
             return (
               <div className='flex flex-col items-center gap-y-[10px]' key={ind}>
-                <Image src={el.src} className={s.image} />
+                <Image src={el.src} className={s.image} width={60} height={60}/>
                 <p className='text-sky font-Nunito font-semibold text-[16px] leading-[22px]'>{el.text}</p>
               </div>
             )
