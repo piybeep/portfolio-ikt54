@@ -1,8 +1,8 @@
 import React from 'react'
 import s from './Info.module.scss'
-import tg from '@/img/img/tg.png'
-import ikt from '@/img/img/ikt.png'
-import vk from '@/img/img/vk.png'
+import tg from '@/img/img/tg.jpg'
+import ikt from '@/img/img/ikt.jpg'
+import vk from '@/img/img/vk.jpg'
 import Image from 'next/image'
 
 const Info = () => {
@@ -43,7 +43,7 @@ const Info = () => {
           data.map((el, ind) => {
             return (
               <div className='flex flex-col items-center gap-y-[10px]' key={ind}>
-                <Image src={el.src} height={60} width={60} />
+                <Image src={el.src} className={s.image} />
                 <p className='text-sky font-Nunito font-semibold text-[16px] leading-[22px]'>{el.text}</p>
               </div>
             )
