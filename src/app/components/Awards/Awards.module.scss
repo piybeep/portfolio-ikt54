@@ -1,0 +1,7 @@
+.cont {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 295px);
+    grid-template-rows: repeat(auto-fit, 417px);
+    gap: 40px;
+}

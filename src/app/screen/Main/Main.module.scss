@@ -1,0 +1,13 @@
+.cont {
+    @apply flex flex-col items-center gap-y-[70px];
+}
+
+.navEl {
+    @apply text-[#808080] font-Nunito font-bold text-xl flex items-center gap-x-[10px];
+    border-bottom: 2px solid transparent;
+
+    &_active {
+        @apply text-sky;
+        border-bottom: 2px solid #4E73DF;
+    }
+}

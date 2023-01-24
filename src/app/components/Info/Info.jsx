@@ -10,15 +10,18 @@ const Info = () => {
   const data = [
     {
       src: '/img/ikt.jpg',
-      text: 'ks54.ru'
+      text: 'ks54.ru',
+      alt: 'ikt54'
     },
     {
       src: '/img/vk.jpg',
-      text: 'ks54_ikt'
+      text: 'ks54_ikt',
+      alt: 'vk54'
     },
     {
       src: '/img/tg.jpg',
-      text: '@ks54_ikt'
+      text: '@ks54_ikt',
+      alt: 'tg54'
     }
   ]
 
@@ -43,7 +46,7 @@ const Info = () => {
           data.map((el, ind) => {
             return (
               <div className='flex flex-col items-center gap-y-[10px]' key={ind}>
-                <Image src={el.src} className={s.image} width={60} height={60}/>
+                <Image src={el.src} className={s.image} width={60} height={60} alt={el.alt} />
                 <p className='text-sky font-Nunito font-semibold text-[16px] leading-[22px]'>{el.text}</p>
               </div>
             )
