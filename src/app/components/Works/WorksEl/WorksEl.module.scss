@@ -1,5 +1,5 @@
 .cont{
-    @apply gap-x-[90px] flex pb-8;
+    @apply gap-x-[90px] flex pb-12;
     border-bottom: 1px solid #D9D9D9;
 }
 
@@ -21,4 +21,8 @@
 
 .textCont{
     @apply text-default flex flex-col gap-y-4;
+}
+
+.view{
+    @apply bg-[#EEF3FB] px-[10px] py-[6px] flex gap-x-2 w-fit rounded-md cursor-pointer;
 }

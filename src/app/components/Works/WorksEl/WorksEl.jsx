@@ -9,9 +9,7 @@ import { Pagination } from 'swiper';
 
 const WorksEl = () => {
     return (
-        <div
-            className={s.cont}
-        >
+        <div className={s.cont}>
             <div className={s.slider}>
                 <Swiper
                     slidesPerView={1}
@@ -33,7 +31,7 @@ const WorksEl = () => {
                         Lorem ipsum dolor sit amet consectetur. Eget maecenas at sit hendrerit nunc volutpat ac. Sit turpis cursus sem in lacinia in ipsum sagittis orci. Ultrices eu pellentesque non cursus. Viverra sed elit gravida luctus justo duis in massa. Pretium habitant donec fermentum nec eget ornare nisi sit. Enim dignissim a tempus tortor et vel porta adipiscing.
                     </p>
                 </div>
-                <div className='flex gap-x-2'>
+                <div className={s.view}>
                     <p>Посмотреть</p>
                     <Image src={'/svg/arrow.svg'} alt='see' width={11} height={9} className='w-auto h-auto' />
                 </div>
