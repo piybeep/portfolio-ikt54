@@ -1,6 +1,8 @@
 import LayoutBasic from '@/app/Layout/LayoutBasic'
 import '@/styles/globals.css'
 import { Nunito } from '@next/font/google'
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const font = Nunito({ preload: true, subsets: ['cyrillic'], weight: ["400", "600", "700"], display: "swap" })
 

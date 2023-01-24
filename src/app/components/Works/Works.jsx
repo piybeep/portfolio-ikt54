@@ -1,8 +1,15 @@
 import React from 'react'
+//styles
+import s from './Works.module.scss'
+import WorksEl from './WorksEl/WorksEl'
 
 const Works = () => {
   return (
-    <div>Works</div>
+    <div className={s.cont}>
+      <WorksEl />
+      <WorksEl />
+      <WorksEl />
+    </div>
   )
 }
 
