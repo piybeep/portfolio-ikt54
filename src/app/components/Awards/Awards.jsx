@@ -18,7 +18,7 @@ const Awards = () => {
     return (
         <div className={s.cont}>
             {
-                data.map(el => <Image src={el.src} key={el.id} width={295} height={417} />)
+                data.map(el => <Image src={el.src} key={el.id} width={295} height={417} alt={'img-'+el.id}/>)
             }
         </div>
     )
