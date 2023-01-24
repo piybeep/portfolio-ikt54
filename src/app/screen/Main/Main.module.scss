@@ -3,7 +3,7 @@
 }
 
 .navEl {
-    @apply text-[#808080] font-Nunito font-bold text-xl flex items-center gap-x-[10px] cursor-pointer;
+    @apply text-[#808080] font-bold text-xl flex items-center gap-x-[10px] cursor-pointer;
     border-bottom: 2px solid transparent;
 
     &_active {

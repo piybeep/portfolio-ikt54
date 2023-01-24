@@ -60,7 +60,7 @@ const Info = () => {
             return (
               <div className='flex flex-col items-center gap-y-[10px]' key={ind}>
                 <Image src={el.src} className={s.image} width={60} height={60} alt={el.alt} />
-                <p className='text-sky font-Nunito font-semibold text-[16px] leading-[22px]'>{el.text}</p>
+                <p className='text-sky font-semibold text-[16px] leading-[22px]'>{el.text}</p>
               </div>
             )
           })

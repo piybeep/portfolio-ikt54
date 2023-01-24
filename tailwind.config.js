@@ -5,9 +5,6 @@ module.exports = {
     "./src/**/*.{js,jsx}",
   ],
   theme: {
-    fontFamily: {
-      Nunito: ['Nunito']
-    },
     colors: {
       sky: '#4E73DF',
       default: '#383838'
