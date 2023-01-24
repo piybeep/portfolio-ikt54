@@ -7,7 +7,7 @@ import doc from '@/public/img/slider/bg.png'
 import s from './WorksEl.module.scss'
 import { Pagination } from 'swiper';
 
-const WorksEl = () => {
+const WorksEl = ({el}) => {
     return (
         <div className={s.cont}>
             <div className={s.slider}>
@@ -19,17 +19,17 @@ const WorksEl = () => {
                     pagination={{ clickable: true, horizontalClass: s.pagination }}
                     className={s.mod}
                 >
-                    <SwiperSlide><Image src={doc} alt='' /></SwiperSlide>
-                    <SwiperSlide><Image src={doc} alt='' /></SwiperSlide>
-                    <SwiperSlide><Image src={doc} alt='' /></SwiperSlide>
+                    {
+                        el.images.map((e, ind) => <SwiperSlide key={ind}>
+                            <Image src={e} alt='' />
+                        </SwiperSlide>)
+                    }
                 </Swiper>
             </div>
             <div className='flex flex-col justify-between'>
                 <div className={s.textCont}>
-                    <p className='font-semibold text-xl'>Название проекта</p>
-                    <p className='font-normal text-base'>
-                        Lorem ipsum dolor sit amet consectetur. Eget maecenas at sit hendrerit nunc volutpat ac. Sit turpis cursus sem in lacinia in ipsum sagittis orci. Ultrices eu pellentesque non cursus. Viverra sed elit gravida luctus justo duis in massa. Pretium habitant donec fermentum nec eget ornare nisi sit. Enim dignissim a tempus tortor et vel porta adipiscing.
-                    </p>
+                    <p className='font-semibold text-xl'>{el.title}</p>
+                    <p className='font-normal text-base'>{el.description}</p>
                 </div>
                 <div className={s.view}>
                     <p>Посмотреть</p>
