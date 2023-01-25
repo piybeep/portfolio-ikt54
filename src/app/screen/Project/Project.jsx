@@ -32,7 +32,7 @@ const Project = () => {
                 {
                     data.map(el => (
                         <>
-                            <p>{el.text}</p>
+                            <p className={s.text}>{el.text}</p>
                             <Image src={el.src} alt='' width={860} height={505} className={s.img} />
                         </>
                     ))
