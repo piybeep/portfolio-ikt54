@@ -22,9 +22,7 @@ const Layout = ({ children }) => {
                 </div>
             </div>
             {children}
-            <div className="w-fit ml-auto font-bold text-[16px] leading-[22px] text-default mt-40">
-                © ikt54.ru, 2023
-            </div>
+            <div className={s.footer}>© ikt54.ru, 2023</div>
         </>
     );
 };
