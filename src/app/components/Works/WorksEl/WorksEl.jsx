@@ -30,10 +30,10 @@ const WorksEl = ({ el }) => {
                     ))}
                 </Swiper>
             </div>
-            <div className="flex flex-col justify-between">
+            <div className={s.info}>
                 <div className={s.textCont}>
-                    <p className="font-semibold text-xl">{el.title}</p>
-                    <p className="font-normal text-base">{el.description}</p>
+                    <p className={s.textCont__title}>{el.title}</p>
+                    <p className={s.textCont__description}>{el.description}</p>
                 </div>
                 <Link href={`/work/${el.id}`} className={s.view}>
                     <p>Посмотреть</p>

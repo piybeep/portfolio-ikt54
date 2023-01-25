@@ -13,3 +13,7 @@
 .title2 {
     @apply text-[24px] leading-[23px] lg:text-xs;
 }
+
+.footer {
+    @apply w-fit ml-auto font-bold text-[16px] leading-[22px] text-default mt-40 md:mt-24;
+}

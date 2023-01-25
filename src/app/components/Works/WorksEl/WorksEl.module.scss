@@ -1,5 +1,5 @@
 .cont {
-    @apply gap-x-[90px] flex pb-12;
+    @apply gap-x-[90px] flex pb-12 lg:flex-col lg:items-center lg:gap-y-12 lg:pb-8;
     border-bottom: 1px solid #d9d9d9;
 }
 
@@ -8,6 +8,10 @@
     img {
         @apply object-cover rounded-md;
     }
+}
+
+.info {
+    @apply flex flex-col justify-between lg:gap-y-7;
 }
 
 .mod {
@@ -21,6 +25,14 @@
 
 .textCont {
     @apply text-default flex flex-col gap-y-4;
+
+    &__title {
+        @apply font-semibold text-xl lg:text-lg;
+    }
+
+    &__description {
+        @apply font-normal text-base lg:text-base;
+    }
 }
 
 .view {
