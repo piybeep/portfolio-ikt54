@@ -8,6 +8,11 @@ module.exports = {
     colors: {
       sky: '#4E73DF',
       default: '#383838'
+    },
+    screens: {
+      'xl': { 'max': '1024px' },
+      'lg': { 'max': '768px' },
+      'md': { 'max': '370px' }
     }
   },
   plugins: [
