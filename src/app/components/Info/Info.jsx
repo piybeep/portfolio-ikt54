@@ -1,8 +1,5 @@
 import React from "react";
 import s from "./Info.module.scss";
-// import tg from '@/img/img/tg.jpg'
-// import ikt from '@/img/img/ikt.jpg'
-// import vk from '@/img/img/vk.jpg'
 import Image from "next/image";
 
 const Info = () => {
