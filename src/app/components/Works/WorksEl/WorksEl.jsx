@@ -1,13 +1,12 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
-//img
-import doc from '@/public/img/slider/bg.png'
 //style
 import s from './WorksEl.module.scss'
 import { Pagination } from 'swiper';
+import Link from 'next/link';
 
-const WorksEl = ({el}) => {
+const WorksEl = ({ el }) => {
     return (
         <div className={s.cont}>
             <div className={s.slider}>
@@ -31,10 +30,10 @@ const WorksEl = ({el}) => {
                     <p className='font-semibold text-xl'>{el.title}</p>
                     <p className='font-normal text-base'>{el.description}</p>
                 </div>
-                <div className={s.view}>
+                <Link href={`/work/${el.id}`} className={s.view}>
                     <p>Посмотреть</p>
                     <Image src={'/svg/arrow.svg'} alt='see' width={11} height={9} className='w-auto h-auto' />
-                </div>
+                </Link>
             </div>
         </div>
     )

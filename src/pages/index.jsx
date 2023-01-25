@@ -11,7 +11,7 @@ const Home = () => {
 Home.getLayout = (page) => {
   return (
     <Layout>
-      <Info/>
+      <Info />
       {page}
     </Layout>
   )
