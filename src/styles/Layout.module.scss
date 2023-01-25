@@ -1,0 +1,15 @@
+.header {
+    @apply mb-[90px] flex-center w-full gap-x-8 lg:gap-x-4 md:mb-14;
+
+    img {
+        @apply lg:w-9 lg:h-7;
+    }
+}
+
+.title1 {
+    @apply text-[17px] lg:text-[8px] lg:leading-3 leading-6;
+}
+
+.title2 {
+    @apply text-[24px] leading-[23px] lg:text-xs;
+}
