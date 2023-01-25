@@ -1,0 +1,19 @@
+.cont{
+    @apply absolute top-0 left-0 w-full h-screen grid place-items-center;
+}
+
+.wrapper{
+    @apply flex flex-col gap-y-5 items-center;
+}
+
+.err{
+    @apply text-sky font-semibold text-lg;
+}
+
+.text{
+    @apply text-sky font-semibold text-2xl;
+}
+
+.back{
+    @apply text-[18px] text-default font-normal leading-6 underline;
+}
