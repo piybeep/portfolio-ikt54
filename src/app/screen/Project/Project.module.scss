@@ -5,7 +5,7 @@
 }
 
 .title {
-    @apply text-default font-semibold text-2xl justify-self-center lg:text-xl;
+    @apply text-default font-semibold text-2xl justify-self-center;
     grid-column-start: 2;
     grid-row-start: 1;
 }
@@ -17,7 +17,7 @@
 }
 
 .img {
-    @apply w-[860px] h-[505px] rounded-xl;
+    @apply max-w-[860px] max-h-[505px] w-full rounded-xl object-cover;
 }
 
 .text {
