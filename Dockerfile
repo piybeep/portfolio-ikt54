@@ -18,13 +18,3 @@ COPY --from=builder /web/package.json ./package.json
 
 EXPOSE 3000
 CMD ["yarn", "start"]
-
-
-
-
-
-# COPY * ./
-# CMD ["yarn", "run", "build"]
-
-# FROM node:lts-alpine as production
-# COPY --from=deps /web/.next dest
