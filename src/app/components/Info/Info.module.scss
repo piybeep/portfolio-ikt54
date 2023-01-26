@@ -3,7 +3,7 @@
 }
 
 .infoEl {
-    @apply gap-y-[20px] max-w-[635px] flex flex-col text-default;
+    @apply gap-y-[20px] max-w-[635px] flex flex-col text-default xl:max-w-full;
 
     h1 {
         @apply text-[18px] leading-[25px] font-bold uppercase lg:text-sm;
