@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import s from "../../styles/Layout.module.scss";
 
 const Layout = ({ children }) => {
     return (
         <>
-            <div className={s.header}>
+            <Link href="/" className={s.header}>
                 <Image
                     src={"/img/logo.png"}
                     alt="ikt54"
@@ -20,7 +21,7 @@ const Layout = ({ children }) => {
                         Выставка достижений студентов ИКТ
                     </p>
                 </div>
-            </div>
+            </Link>
             {children}
             <div className={s.footer}>© ikt54.ru, 2023</div>
         </>

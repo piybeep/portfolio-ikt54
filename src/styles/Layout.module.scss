@@ -1,5 +1,5 @@
 .header {
-    @apply mb-[90px] flex-center w-full gap-x-8 lg:gap-x-4 md:mb-14;
+    @apply mb-[90px] flex-center w-full gap-x-8 lg:gap-x-4 md:mb-14 select-none;
 
     img {
         @apply lg:w-9 lg:h-7;
