@@ -6,19 +6,19 @@ import Link from "next/link";
 const Info = () => {
     const data = [
         {
-            src: "/img/ikt.jpg",
+            src: "/img/ikt.png",
             text: "ks54.ru",
             alt: "ikt54",
             link: "https://ks54.ru",
         },
         {
-            src: "/img/vk.jpg",
+            src: "/img/vk.png",
             text: "ks54_ikt",
             alt: "vk54",
             link: "https://vk.com/ks54ru",
         },
         {
-            src: "/img/tg.jpg",
+            src: "/img/tg.png",
             text: "@ks54_ikt",
             alt: "tg54",
             link: "https://t.me/ks54ru",
