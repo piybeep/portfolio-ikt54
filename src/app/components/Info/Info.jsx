@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./Info.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const Info = () => {
     const data = [
@@ -8,16 +9,19 @@ const Info = () => {
             src: "/img/ikt.jpg",
             text: "ks54.ru",
             alt: "ikt54",
+            link: "https://ks54.ru",
         },
         {
             src: "/img/vk.jpg",
             text: "ks54_ikt",
             alt: "vk54",
+            link: "https://vk.com/ks54ru",
         },
         {
             src: "/img/tg.jpg",
             text: "@ks54_ikt",
             alt: "tg54",
+            link: "https://t.me/ks54ru",
         },
     ];
 
@@ -51,7 +55,8 @@ const Info = () => {
             <div className="flex-center gap-x-[43px]">
                 {data.map((el, ind) => {
                     return (
-                        <div
+                        <Link
+                            href={el.link}
                             className="flex flex-col items-center gap-y-[10px]"
                             key={ind}
                         >
@@ -65,7 +70,7 @@ const Info = () => {
                             <p className="text-sky font-semibold text-[16px] leading-[22px]">
                                 {el.text}
                             </p>
-                        </div>
+                        </Link>
                     );
                 })}
             </div>

@@ -3,6 +3,8 @@ import Link from "next/link";
 import React from "react";
 //style
 import s from "./Project.module.scss";
+//img
+import arrowBack from "@/public/svg/arrowBack.svg";
 
 const Project = () => {
     const data = [
@@ -29,30 +31,25 @@ const Project = () => {
         <div>
             <div className={s.header}>
                 <Link href="/" className={s.arrow}>
-                    <Image
-                        src="/svg/arrowBack.svg"
-                        alt="back"
-                        width={18}
-                        height={15}
-                    />
+                    <Image src={arrowBack} alt="back" />
                 </Link>
                 <h1 className={s.title}>Название проекта</h1>
             </div>
             <div className="flex items-center flex-col gap-y-10">
                 {data.map((el) => (
-                    <>
-                        <p className={s.text} key={el.id}>
-                            {el.text}
-                        </p>
+                    <div
+                        className="flex flex-col items-center gap-y-10"
+                        key={el.id}
+                    >
+                        <p className={s.text}>{el.text}</p>
                         <Image
                             src={el.src}
-                            key={el.id + "img"}
                             alt=""
                             width={860}
                             height={505}
                             className={s.img}
                         />
-                    </>
+                    </div>
                 ))}
             </div>
         </div>
