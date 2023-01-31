@@ -28,14 +28,22 @@ const Info = () => {
     const dataText = [
         {
             title: "о сайте",
-            text:
-                "Lorem ipsum dolor sit amet consectetur. Eget maecenas at sit hendrerit nunc volutpat ac. Sit turpis cursus sem in lacinia in ipsum sagittis orci. Ultrices eu pellentesque non cursus. Viverra sed elit gravida luctus justo duis in massa. Pretium habitant donec fermentum nec eget ornare nisi sit. Enim dignissim a tempus tortor et vel porta adipiscing. Nisl adipiscing ut at amet lectus pellentesque. Habitant integer pellentesque tellus in pellentesque ut tortor. Pretium dictumst vivamus ut velit at. Nec tristique cursus vestibulum ultricies fames risus venenatis nullam. In sed elementum sed ultrices blandit mi adipiscing tortor pulvinar. Pellentesque et risus aliquam.",
+            text: `На данном сайте представлены лучшие проекты студентов Колледжа Связи №54 им П.М. Вострухина, отделения        Информационно-коммуникационных технологий. 
+Интересные разработки и идеи, лучшие реализации проектов, используемых даже вне стен отделения, награды, грамоты и призы. Все это про нас, ведь нам есть чем гордиться.`,
             id: 1,
         },
         {
             title: "об икт",
-            text:
-                "Отделение ИКТ (Информационно-коммуникационные технологии) - это одно подразделений Колледжа Связи №54. Enim dignissim a tempus tortor et vel porta adipiscing. Nisl adipiscing ut at amet lectus pellentesque. Habitant integer pellentesque tellus in pellentesque ut tortor. Pretium dictumst vivamus ut velit at. Nec tristique cursus vestibulum ultricies fames risus venenatis nullam. In sed elementum sed ultrices blandit mi adipiscing tortor pulvinar.",
+            text: `Отделение информационно-коммуникационных технологий, это давно утвердившее свой высокий статус и продолжающее развиваться отделение Колледжа Связи №54 им. П.М. Вострухина.
+Самое важное о нас:
+<strong>Специальность</strong>
+09.02.07 Информационные системы и программирование
+<strong>Компетенции</strong>
+•	Программист – 24 групп
+•	Администратор баз данных – 10 групп
+•	Веб и мультимедийные приложения – 1 группа
+<strong>Общая численность студентов</strong>
+880 человек`,
             id: 2,
         },
     ];
@@ -47,7 +55,7 @@ const Info = () => {
                     return (
                         <div className={s.infoEl} key={el.id}>
                             <h1>{el.title}</h1>
-                            <p>{el.text}</p>
+                            <p dangerouslySetInnerHTML={{__html:el.text}} />
                         </div>
                     );
                 })}

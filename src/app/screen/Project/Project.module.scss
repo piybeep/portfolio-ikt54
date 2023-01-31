@@ -30,9 +30,10 @@
 }
 
 .img {
-    @apply max-w-[860px] max-h-[505px] w-full rounded-xl object-cover;
+    @apply max-w-[860px] w-full rounded-xl object-cover;
 }
 
 .text {
     @apply text-[18px] xl:max-w-[642px] font-normal leading-6 lg:text-base;
+    white-space: break-spaces;
 }

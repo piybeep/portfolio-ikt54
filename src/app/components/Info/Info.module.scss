@@ -11,6 +11,7 @@
 
     p {
         @apply text-[20px] leading-[27px] font-normal lg:text-base;
+        white-space: break-spaces;
     }
 }
 
