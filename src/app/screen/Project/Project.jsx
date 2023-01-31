@@ -1,44 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 //style
 import s from "./Project.module.scss";
+//data
+import data from "./projectData.js";
 
 const Project = () => {
-    const data = [
-        {
-            id: 1,
-            text: `Отделение Информационно-коммуникационных технологий активно развивается и внедряет свои разработки в жизнь Колледжа.
-Одна из наших значимых мобильных разработок - социальная сеть «KSMess».
-Студенты группы 3ИСП9-13 Хасанов Георгий и Хасанов Альберт, под руководством преподавателя спец. дисциплин Адышкина Сергея Сергеевича реализовали в жизнь идею, которая посещала многих. 
-                `,
-            src: ["/img/slider/one.jpg"],
-        },
-        {
-            id: 2,
-            text: `❓Как быстро и удобно получать оповещения о важных событиях и быть в курсе новостей отделения?
-❓Как узнать о последних или срочных заменах?
-❓Как не потерять свой кабинет и найти нужный, особенно когда ты первокурсник?
-❓Как пообщаться с одногруппниками или задать вопрос преподавателю, ведь так много разных социальных сетей?
-❓Как найти работу и где искать вакансии от своего колледжа и по нужной специальности?
-                `,
-            src: ["/img/slider/two.jpg"],
-        },
-        {
-            id: 3,
-            text: `Эти и многие другие вопросы решила одна важная мобильная разработка, а именно наша «Паутинка - KSMess». 
-Сейчас приложение доступно для операционной системы Android, а наша команда продолжает его совершенствование и покорение ОС IOS. 
-Предлагаем Вам самостоятельно скачать и протестировать наше приложение
-https://play.google.com/store/apps/details?id=com.iongames.messenger
-И не забудьте оставить нам положительный отзыв. 
-                `,
-            src: ["/img/slider/three.jpg"],
-        },
-        {
-            id: 4,
-            src: ["/img/slider/four.jpg", "/img/slider/five.jpg"],
-        },
-    ];
+    const router = useRouter();
+
+    let info = [], names = Object.keys(data)
+    console.log(router.query.id);
+    if (router.query.hasOwnProperty("id")) {
+        info = data[names[router.query.id - 1]];
+        console.log(info);
+    }
+
     return (
         <div>
             <div className={s.header}>
@@ -59,15 +37,16 @@ https://play.google.com/store/apps/details?id=com.iongames.messenger
                 <h1 className={s.title}>Мобильная разработка</h1>
             </div>
             <div className="flex items-center flex-col gap-y-10">
-                {data.map((el) => (
+                {info?.map((el) => (
                     <div
                         className="flex flex-col items-center gap-y-10"
                         key={el.id}
                     >
                         {el.text && <p className={s.text}>{el.text}</p>}
                         <div className="flex-center gap-4 w-full xl:flex-wrap">
-                            {el.src.map((item) => (
+                            {el.src.map((item, ind) => (
                                 <Image
+                                    key={ind}
                                     src={item}
                                     alt=""
                                     width={860}
