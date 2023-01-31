@@ -15,13 +15,13 @@ const Info = () => {
             src: "/img/vk.png",
             text: "ks54_ikt",
             alt: "vk54",
-            link: "https://vk.com/ks54ru",
+            link: "https://vk.com/ks54_ikt",
         },
         {
             src: "/img/tg.png",
             text: "@ks54_ikt",
             alt: "tg54",
-            link: "https://t.me/ks54ru",
+            link: "https://t.me/ks54_ikt",
         },
     ];
 
