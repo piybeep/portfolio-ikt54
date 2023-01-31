@@ -3,28 +3,40 @@ import Link from "next/link";
 import React from "react";
 //style
 import s from "./Project.module.scss";
-//img
-import arrowBack from "@/public/svg/arrowBack.svg";
 
 const Project = () => {
     const data = [
         {
             id: 1,
-            text:
-                "Lorem ipsum dolor sit amet consectetur. Eget maecenas at sit hendrerit nunc volutpat ac. Sit turpis cursus sem in lacinia in ipsum sagittis orci. Ultrices eu pellentesque non cursus. Viverra sed elit gravida luctus justo duis in massa. Pretium habitant donec fermentum nec eget ornare nisi sit. Enim dignissim a tempus tortor et vel porta adipiscing.",
-            src: "/img/slider/bg.png",
+            text: `Отделение Информационно-коммуникационных технологий активно развивается и внедряет свои разработки в жизнь Колледжа.
+Одна из наших значимых мобильных разработок - социальная сеть «KSMess».
+Студенты группы 3ИСП9-13 Хасанов Георгий и Хасанов Альберт, под руководством преподавателя спец. дисциплин Адышкина Сергея Сергеевича реализовали в жизнь идею, которая посещала многих. 
+                `,
+            src: ["/img/slider/one.jpg"],
         },
         {
             id: 2,
-            text:
-                "Lorem ipsum dolor sit amet consectetur. Eget maecenas at sit hendrerit nunc volutpat ac. Sit turpis cursus sem in lacinia in ipsum sagittis orci. Ultrices eu pellentesque non cursus. Viverra sed elit gravida luctus justo duis in massa. Pretium habitant donec fermentum nec eget ornare nisi sit. Enim dignissim a tempus tortor et vel porta adipiscing.",
-            src: "/img/slider/bg.png",
+            text: `❓Как быстро и удобно получать оповещения о важных событиях и быть в курсе новостей отделения?
+❓Как узнать о последних или срочных заменах?
+❓Как не потерять свой кабинет и найти нужный, особенно когда ты первокурсник?
+❓Как пообщаться с одногруппниками или задать вопрос преподавателю, ведь так много разных социальных сетей?
+❓Как найти работу и где искать вакансии от своего колледжа и по нужной специальности?
+                `,
+            src: ["/img/slider/two.jpg"],
         },
         {
             id: 3,
-            text:
-                "Lorem ipsum dolor sit amet consectetur. Eget maecenas at sit hendrerit nunc volutpat ac. Sit turpis cursus sem in lacinia in ipsum sagittis orci. Ultrices eu pellentesque non cursus. Viverra sed elit gravida luctus justo duis in massa. Pretium habitant donec fermentum nec eget ornare nisi sit. Enim dignissim a tempus tortor et vel porta adipiscing.",
-            src: "/img/slider/bg.png",
+            text: `Эти и многие другие вопросы решила одна важная мобильная разработка, а именно наша «Паутинка - KSMess». 
+Сейчас приложение доступно для операционной системы Android, а наша команда продолжает его совершенствование и покорение ОС IOS. 
+Предлагаем Вам самостоятельно скачать и протестировать наше приложение
+https://play.google.com/store/apps/details?id=com.iongames.messenger
+И не забудьте оставить нам положительный отзыв. 
+                `,
+            src: ["/img/slider/three.jpg"],
+        },
+        {
+            id: 4,
+            src: ["/img/slider/four.jpg", "/img/slider/five.jpg"],
         },
     ];
     return (
@@ -44,7 +56,7 @@ const Project = () => {
                         />
                     </svg>
                 </Link>
-                <h1 className={s.title}>Название проекта</h1>
+                <h1 className={s.title}>Мобильная разработка</h1>
             </div>
             <div className="flex items-center flex-col gap-y-10">
                 {data.map((el) => (
@@ -52,14 +64,18 @@ const Project = () => {
                         className="flex flex-col items-center gap-y-10"
                         key={el.id}
                     >
-                        <p className={s.text}>{el.text}</p>
-                        <Image
-                            src={el.src}
-                            alt=""
-                            width={860}
-                            height={505}
-                            className={s.img}
-                        />
+                        {el.text && <p className={s.text}>{el.text}</p>}
+                        <div className="flex-center gap-4 w-full xl:flex-wrap">
+                            {el.src.map((item) => (
+                                <Image
+                                    src={item}
+                                    alt=""
+                                    width={860}
+                                    height={505}
+                                    className={s.img}
+                                />
+                            ))}
+                        </div>
                     </div>
                 ))}
             </div>
