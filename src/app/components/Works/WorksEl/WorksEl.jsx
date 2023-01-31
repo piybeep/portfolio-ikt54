@@ -25,7 +25,11 @@ const WorksEl = ({ el }) => {
                 >
                     {el.images.map((e, ind) => (
                         <SwiperSlide key={ind}>
-                            <Image src={e} alt="" />
+                            <Image
+                                src={e}
+                                alt=""
+                                className="w-full h-full object-cover"
+                            />
                         </SwiperSlide>
                     ))}
                 </Swiper>
