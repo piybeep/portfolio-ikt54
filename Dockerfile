@@ -1,11 +1,12 @@
-FROM node:lts-alpine as deps
+FROM node:lts-alpine as dependencies
 WORKDIR /web
 COPY package.json yarn.lock ./
-RUN yarn install --production
+RUN yarn install --production --frozen-lockfile
 
 FROM node:lts-alpine as builder
 WORKDIR /web
 COPY . .
+COPY --from=dependencies /web/node_modules ./node_modules
 RUN yarn build
 
 FROM node:lts-alpine as runner
