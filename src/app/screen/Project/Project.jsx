@@ -66,8 +66,9 @@ https://play.google.com/store/apps/details?id=com.iongames.messenger
                     >
                         {el.text && <p className={s.text}>{el.text}</p>}
                         <div className="flex-center gap-4 w-full xl:flex-wrap">
-                            {el.src.map((item) => (
+                            {el.src.map((item, ind) => (
                                 <Image
+                                    key={ind}
                                     src={item}
                                     alt=""
                                     width={860}
