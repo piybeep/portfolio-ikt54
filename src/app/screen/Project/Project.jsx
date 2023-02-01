@@ -10,10 +10,14 @@ import data from "./projectData.js";
 const Project = () => {
     const router = useRouter();
 
-    let info = [], names = Object.keys(data)
+    let info = [],
+        names = Object.keys(data);
     console.log(router.query.id);
     if (router.query.hasOwnProperty("id")) {
-        info = data[names[router.query.id - 1]];
+        info = {
+            data: data[names[router.query.id - 1]],
+            title: names[router.query.id - 1],
+        };
         console.log(info);
     }
 
@@ -34,10 +38,10 @@ const Project = () => {
                         />
                     </svg>
                 </Link>
-                <h1 className={s.title}>Мобильная разработка</h1>
+                <h1 className={s.title}>{info.title}</h1>
             </div>
             <div className="flex items-center flex-col gap-y-10">
-                {info?.map((el) => (
+                {info?.data?.map((el) => (
                     <div
                         className="flex flex-col items-center gap-y-10"
                         key={el.id}
