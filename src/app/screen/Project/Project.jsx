@@ -7,7 +7,7 @@ import s from './Project.module.scss'
 //data
 import data from './projectData.js'
 
-const Project = () => {
+const Project = (props) => {
   const router = useRouter()
 
   let info = [],
@@ -16,9 +16,6 @@ const Project = () => {
     info = {
       data: data[names[router.query.id - 1]],
       title: names[router.query.id - 1]
-    }
-    if(!info.data){
-        router.push('/404')
     }
   }
 
