@@ -21,14 +21,14 @@ export async function getServerSideProps(context) {
   }
 
   return {
-    props: {}
+    props: { title: info.title }
   }
 }
 
 ProjectId.getLayout = (page) => {
   return (
     <div className='max-w-[1077px] mx-auto'>
-      <Layout>{page}</Layout>
+      <Layout title={page?.props?.title}>{page}</Layout>
     </div>
   )
 }

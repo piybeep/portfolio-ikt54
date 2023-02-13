@@ -10,7 +10,7 @@ const Home = () => {
 
 Home.getLayout = (page) => {
   return (
-    <Layout>
+    <Layout title="Портфолио ИКТ">
       <Info />
       {page}
     </Layout>
