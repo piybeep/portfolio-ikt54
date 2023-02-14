@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React from 'react'
 import s from '../../styles/Layout.module.scss'
 
-const Layout = ({ children,title='ikt' }) => {
+const Layout = ({ children,title='Портфолио ИКТ' }) => {
   return (
     <>
       <Head>
